@@ -1,0 +1,21 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath}
+\usepackage{tcolorbox}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{accents}
+\overfullrule=0pt
+\pagestyle{fancy}
+\setlength{\headheight}{45pt}
+
+
+\newenvironment{solution}
+  {\renewcommand\qedsymbol{}
+  \begin{proof}[Solution]}
+  {\end{proof}}
+\renewcommand\qedsymbol{$}
+
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}

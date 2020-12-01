@@ -1,0 +1,42 @@
+Existence and Uniqueness
+
+% Prove that there exists a unique set $A$, such that $A \cap B  = A$ for all sets $B$.
+% \begin{solution}
+% In order to prove that there exists some set $A$ such that $A \cap B$ for all $B$, we must show that there is an example where this is true first. Let $A$  be equivalent to the empty set $\emptyset$. Since $A$ is always empty, then there will never be any overlap with $B$ since $\emptyset \cap B = \emptyset$. Since the intersection will always be empty, then $A \cap B = A$ if $A = \emptyset$ for all possible sets $B$. In order to show that $A = \emptyset$, we must show that every other solution does not work. If we let $A \neq\emptyset$, then we can always find some $B$ that makes the expression $A \cap B = A$ be false. Define $B$ as $B = A^c$, then $A \cap B = A$ will never be true unless $A$ is equal to the empty set meaning that the empty set is the only value for $A$ that works for all values of $B$. This shows that $A = \emptyset$ is the unique solution for $A \cap B  = A$ for all sets $B$.
+% \end{solution}
+
+
+Let $s_1=1$ and $s_{n+1}=\sqrt{s_n+1}$.  Prove that the limit of this sequence exists and is unique.
+
+\begin{solution}
+Before we can find the limit of the sequence, we must show that the sequence converges. In order to show that $s_n$ converges, we must show that the sequence is both monotonic and bounded. In order to show that the sequence is monotonic, we must show that it either increases or decreases. In our scenario, the sequence increases and we will show this through induction. We know that $s_0 = 1$ so therefore $s_1 = \sqrt{1 + 1} = \sqrt{2} > s_0$, which shows that our base case holds. Now we assume that $s_n < s_{n+1}$ is true and wish to show that $s_{n+1} < s_{n+2}$
+\begin{align*}
+    s_n & < s_{n+1} \\
+    s_n  + 1& < s_{n+1} + 1\\
+    \sqrt{s_n  + 1}& < \sqrt{s_{n+1} + 1}\\
+    s_{n+1}= \sqrt{s_n  + 1}& < \sqrt{s_{n+1} + 1} = s_{n+2}\\
+    s_{n+1}& < s_{n+2}
+\end{align*}
+So we know that the sequence $s_n$ is increasing. We can see that the sequence $s_n$ is bounded by the fact that the sequence is bounded by 3. We can prove this by letting $s_x = 3$, then $s_{x+1} = \sqrt{3 + 1} = 2$ so $s_{x+1} < s_x$.
+So we know that $s_n$ is bounded and has a supremum less than 3.
+Now, we have shown that $s_n$ is bounded and monotonic. We must find and prove the limit of $s_n$. Since $s_n$ is increasing, we know the limit must be the supremeum must also be the limit.
+By the definition of the supremum we know that $$s_x = s_{x+1}$$
+We can use this and solve for the supremum as shown:
+\begin{align*}
+    s_x &= s_{x+1} \\
+    x &= \sqrt{x + 1} \\
+    x^2 &= x + 1 \\
+    x^2 - x -1 & = 0\\
+    x & = \frac{1 \pm \sqrt{5}}{2}
+\end{align*}
+Since the function $s_n$ is increasing we know the supremum must be $\frac{1 + \sqrt{5}}{2}$. Now we must prove that this is the limit of $s_n$. Let $x$ be the supremum of $s_n$. Let $\epsilon > 0$ and some $N$ such that $n>N$. Let $s_N = x - \epsilon$. We then get
+$$s_N < s_n \leq x $$
+$$ x - \epsilon < s_n \leq x $$
+$$ x - \epsilon -x  < s_n - x \leq x - x $$
+$$ - \epsilon  < s_n - x \leq 0$$
+$$ - \epsilon  < s_n - x$$
+$$|s_n - x| < \epsilon$$
+Which by the definition of a convergent sequence, means that $s_n$ converges to $x = \frac{1 + \sqrt{5}}{2}$, therefore proving that $s_n$ is convergent and has a limit as desired.
+\end{solution}
+
+NOW SHOW UNIQUE
