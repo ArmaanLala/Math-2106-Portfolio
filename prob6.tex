@@ -3,8 +3,8 @@ Proof using Sets
 Prove that 
 \[\bigcap_{x\in\mathbb{R}} [3-x^2,5+x^2]=[3,5].\]
 
-\begin{solution}
+\begin{proof}
 In order to show that both of these sets are equivalent, we need to show that they are both subsets of each other. The first thing we can look at is $[3,5]\subseteq\bigcap_{x\in\mathbb{R}} [3-x^2,5+x^2]$. We see that for $\bigcap_{x\in\mathbb{R}} [3-x^2,5+x^2]$ we can look at both sides and determine inequalities. Since we always know $x^2$ will be positive, we can determine the left side to be $ 3 - x^2 \leq 3$ and the right side to be $5 + x^2 \geq 5$. Since the intervals will always include 3 and 5, we can see that $[3,5]\subseteq\bigcap_{x\in\mathbb{R}} [3-x^2,5+x^2]$. 
 
 Next we must take a look at $\bigcap_{x\in\mathbb{R}} [3-x^2,5+x^2]\subseteq[3,5].$ If we allow $ a \in \bigcap_{x\in\mathbb{R}} [3-x^2,5+x^2], a \in \mathbb{R}$, then we can write this as the inequality $3 - x^2 \leq a \leq 5 + x^2, x \in \mathbb{R}$. Now we have to look at the overlap for the sets in $\bigcap_{x\in\mathbb{R}} [3-x^2,5+x^2]$. This means we need to maximize $3 - x^2$ and minimize $5 + x^2$ and since we know $x^2 \geq 0$, both of these occur at $x=0$. This will give us that $a \in [3,5]$ meaning that $\bigcap_{x\in\mathbb{R}} [3-x^2,5+x^2]\subseteq[3,5]$. Since we have shown both sides of this statement are subsets of each other, we can now say that $\bigcap_{x\in\mathbb{R}} [3-x^2,5+x^2]=[3,5].$
-\end{solution}
+\end{proof}

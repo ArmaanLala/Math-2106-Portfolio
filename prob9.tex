@@ -10,7 +10,7 @@ We also have that $f$ is said to be \textbf{midterm surjective} if for all $b \i
 $$| f^{-1}(\{b\})| > 0 $$
 Prove that f is midterm surjective if and only if $f$ is surjective
 
-\begin{solution}
+\begin{proof}
 First let us begin by showing that $f$ is midterm injective if and only if $f$ is injective.
 Let $f$ be injective. So let $a,b \in A$, then let $f(a),f(b) \in f(A)$, so therefore $f(a),f(b) \in Y$. Then by the definition of injective, each value in A has at most 1 corresponding value in B. Therefore $b\in B$ and $|f^{-1} (b)|$ is either equal to 0 or 1, both of which are less than equal to 1, meaning that $f$ is midterm injective.
 Now assume $f$ is midterm injective. We then know that $\forall b \in B  |f^{-1} (b)| \leq 1$. Let $f^{-1} (b) = a$. By the definition of midterm injective, $a$ must be either $a \in A$ or nonexistent which means that it is unique, proving that $f$ is injective. Therefore we have shown that $f$ is midterm injective if and only if $f$ is injective.
@@ -18,4 +18,4 @@ Now assume $f$ is midterm injective. We then know that $\forall b \in B  |f^{-1}
 Next we will show that $f$ is midterm surjective if and only if $f$ is surjective. Assume $f$ is midterm surjective, then we know that $|f^{-1} (b)|  > 0$, meaning that for all $b \in B$, there exists some $f(a) = b, a \in A$. Sincethere exists some $f(a) = b$ for all $b$, then by definition $f$ is surjective.
 Now assume $f$ is surjective, then we know $\forall b \in B, \exists a , f(a) = b$. Since there is always some $a$ that can transform into any $b$, $|f^{-1} (b)|$ is always at least one meaning that $|f^{-1} (b)| > 0$ showing that $f$ is midterm surjective.
 Therefore we have shown that $f$ is midterm surjective if and only if $f$ is surjective.
-\end{solution}
+\end{proof}
