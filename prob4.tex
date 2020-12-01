@@ -2,15 +2,18 @@ If and only if
 
 Let $G$ be a group.  Prove that $G$ is abelian if and only if $(ab)^2=a^2b^2$ for all $a,b\in G$. 
 
-\begin{proof}
-Suppose that $G$ is an abelian group. Let $a,b,c \in G$ and let $c = ab$. Then $cc = c^2$. Now we can substitute in $ab$ for $c$.
+\begin{proof} First we must show that if $G$ is abelian, then $(ab)^2=a^2b^2$ for all $a,b\in G$
+
+
+Assume that $G$ is an abelian group. Let $a,b,c \in G$ and let $c = ab$. Then $cc = c^2$. Now we can substitute in $ab$ for $c$.
 $$(ab)(c) = (ab)^2 $$ Since we know $G$ is abelian, then we can rewrite $c$ as $ba$ giving us $$(ab)(ba) = (ab)^2 $$ $$ab^2a = (ab)^2$$ $$ aab^2 = (ab)^2$$ $$a^2b^2 = (ab)^2$$ Therefore showing that $G$ is abelian implies $(ab)^2=a^2b^2$ for all $a,b\in G$.
 
-Now suppose we know that $(ab)^2=a^2b^2$ is true for all $a,b\in G$. Lets show that $G$ is abelian.
+Next suppose that $(ab)^2=a^2b^2$ is true for all $a,b\in G$. Lets show that $G$ is abelian.
 $$ (ab)^2 = a^2b^2 $$
 $$(ab)(ab) = aabb $$
 $$abab = aabb $$ Multiply both sides by $a^{-1}$ and $b^{-1}$
 $$a^{-1}abab b^{-1} = a^{-1}aabb b^{-1}$$
 $$ ba = ab$$
-Which is the definition of commutative meaning that $G$ is abelian if and only if $(ab)^2=a^2b^2$ for all $a,b\in G$.
+
+Since we have shown that $ab = ba$, then we know $G$ must be abelian by the definition of commutative so we have thus show that $G$ is abelian if and only if $(ab)^2=a^2b^2$ for all $a,b\in G$.
 \end{proof}

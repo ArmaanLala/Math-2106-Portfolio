@@ -2,12 +2,13 @@ An equivalence relation proof
 Prove that the intersection of equivalence relations on the same set is an equivalence relation
 
 \begin{proof}
-In order to show that the intersection of equivalence relations is an equivalence relation, we must show that the intersection is reflexive, symmetric, and transitive. First we can define the two equivalence relations as $R_1$ and $R_2$. Then we can represent the intersection as $R_1\cap R_2$
+In order to show that the intersection of equivalence relations is an equivalence relation, we must show that the intersection is reflexive, symmetric, and transitive. Let us define the two equivalence relations $R_1$ and $R_2$. Then we can represent the intersection as $R_1\cap R_2$
 
-\begin{itemize}
-    \item If we have the set $A$, then we know that if we let $x\in A$, then we know that $xR_1x$ and $xR_2x$ exist since $R_1$ and $R_2$ are reflexive so we can say that $(x,x)\in R_1\cap R_2$ therefore showing that $R_1\cap R_2$ is reflexive
-    \item Now we can show that $R_1\cap R_2$ is symmetric. Assume $x(R_1\cap R_2)y$ where $x,y \in A$, then we know that $xR_1y$ and $xR_2y$ exist and since both $R_1$ and $R_2$ are symmetric, then $yR_1x$ and $yR_2x$ exist as well and therefore $y(R_1\cap R_2)x$ is true as well.
-    \item Lastly we must show that $R_1\cap R_2$ is transitive as well. If we assume $x(R_1\cap R_2)y$ and $y(R_1\cap R_2)z$ both are true, then we know that $xR_1y$, $xR_2y$ ,$yR_1z$, $yR_2z$ all exist and are true. Then, since $R_1$ and $R_2$ are equivalence relations and therefore are transitive so $xR_1z$ and $xR_2z$ exist so therefore $x(R_1\cap R_2)z$ exists and shows that $R_1\cap R_2$ is transitive as well
-\end{itemize}
+ Assume both $R_1$ and $R_2$ are equivalence relations on the set $A$, then we know that if we let $x\in A$, then we know that $xR_1x$ and $xR_2x$ exist since $R_1$ and $R_2$ are reflexive so we can say that $(x,x)\in R_1\cap R_2$ therefore showing that $R_1\cap R_2$ is reflexive
+ 
+ Now we can show that $R_1\cap R_2$ is symmetric. Assume $x(R_1\cap R_2)y$ where $x,y \in A$, then we know that $xR_1y$ and $xR_2y$ exist and since both $R_1$ and $R_2$ are symmetric, then $yR_1x$ and $yR_2x$ exist as well and therefore $y(R_1\cap R_2)x$ is true as well.
+ 
+ Lastly we must show that $R_1\cap R_2$ is transitive as well. Assume $x(R_1\cap R_2)y$ and $y(R_1\cap R_2)z$ both are true, then we know that $xR_1y$, $xR_2y$ ,$yR_1z$, $yR_2z$ all exist and are true. Then, since $R_1$ and $R_2$ are equivalence relations and therefore are transitive so $xR_1z$ and $xR_2z$ exist so therefore $x(R_1\cap R_2)z$ exists and shows that $R_1\cap R_2$ is transitive as well
+
 Since we are able to show that $R_1\cap R_2$ is reflexive, symmetric, and transitive, then we know that $R_1\cap R_2$ is an equivalence relation proving that the intersection of two equivalence relations is an equivalence relation as well.
 \end{proof}

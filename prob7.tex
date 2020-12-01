@@ -1,1 +1,41 @@
 Induction Proof
+
+Prove by induction that \[ \sum_{k=0}^{n} {n \choose k}= 2^n \]
+
+\begin{proof}
+In order to prove by induction, we must first look at our base cases of $n = 0$ and $n = 1$.
+If we let $n = 0$, then we can see that $\sum_{k=0}^{n} {n \choose k} = \sum_{k=0}^{0} {0 \choose 0} =\frac{0!}{0!} = 1 = 2^0$ so the case where $n = 0$ is true.
+Now let us look at the case where $n = 1$. We see that $\sum_{k=0}^{1} {1 \choose 0}  + {1 \choose 1} = \frac{1!}{0!} + \frac{1!}{1!} = 1 + 1 = 2 = 2^1$ so our case where $n = 1$ holds true as well.
+
+Now let us assume that $\sum_{k=0}^{n} {n \choose k}= 2^n$ for some constant $n,k \in \mathbb{N}$ where $k < n$. Now we look to show that $\sum_{k=0}^{n + 1} {n + 1 \choose k}= 2^{n+1}$.
+
+Looking at $\sum_{k=0}^{n + 1} {n + 1 \choose k}$, we can expand this expression out as follows:
+
+$$ \sum_{k=0}^{n + 1} {n + 1 \choose k} = {n + 1 \choose 0} + {n + 1 \choose 1} + {n + 1 \choose 2} + ... + {n + 1 \choose n} + {n + 1 \choose n + 1}$$
+We know that ${n + 1 \choose 0}$ is equivalent to $\frac{(n + 1)!}{(n + 1)!} = 1$, we can also see that ${n + 1 \choose n + 1}$ is equivalent to $\frac{(n + 1)!}{(n + 1)!} = 1$ as well. We can take our expansion above and rewrite it as follows.
+$$ 1 + {n + 1 \choose 1} + {n + 1 \choose 2} + ... + {n + 1 \choose n} + 1$$
+which is equivlant to 
+$$ 2 + \sum_{k=1}^{n} {n + 1 \choose k} $$
+Using Lemma 7.1, we are able to break $\sum_{k=1}^{n} {n + 1 \choose k}$ up into 2 smaller summations
+
+$$ 2 + \sum_{k=1}^{n} {n + 1 \choose k}  = 2 + \sum_{k=1}^{n} {n \choose k - 1} + \sum_{k=1}^{n} {n \choose k} $$
+
+Looking at the summation $\sum_{k=1}^{n} {n \choose k - 1}$, we can see the following $$\sum_{k=1}^{n} {n \choose k - 1} = {n  \choose 0} + {n  \choose 1} + {n \choose 2} + ... + {n \choose n - 1} = $$ $$\sum_{k=0}^{n} {n \choose k} - {n \choose n} = \sum_{k=0}^{n} {n \choose k} - 1$$
+
+Next let us look at the summation $\sum_{k=1}^{n} {n \choose k}$. If we expand this summation, we are able to see that $$\sum_{k=1}^{n} {n \choose k} =  {n  \choose 1} + {n \choose 2} + ... + {n \choose n - 1} {n  \choose n}$$
+ $$= \sum_{k=0}^{n} {n \choose k} - {n \choose 0} = \sum_{k=0}^{n} {n \choose k} - 1$$
+ 
+ If we substitute both of these statements back into our original equation we get that:
+ $$ 2 + \sum_{k=1}^{n} {n \choose k - 1} + \sum_{k=1}^{n} {n \choose k} =  2 + \sum_{k=0}^{n} {n \choose k} - 1 +  \sum_{k=0}^{n} {n \choose k} - 1$$
+ $$= 2 \sum_{k=0}^{n} {n \choose k}$$
+ Now using our induction hypothesis above, we can substitute $\sum_{k=0}^{n} {n \choose k}$ with $2^n$. This now gives us:
+  $$= 2 \sum_{k=0}^{n} {n \choose k} = 2\cdot2^n = 2 ^{n+1}$$ Thus showing that $\sum_{k=0}^{n + 1} {n + 1 \choose k}= 2^{n+1}$ as desired. We have thus shown that by mathematical induction, $\sum_{k=0}^{n} {n \choose k}= 2^n$ holds true for all $n,k\in \mathbb{N}$
+\end{proof}
+
+\textbf{Lemma 7.1} ${n +1 \choose k} = {n \choose k - 1} + {n \choose k}$
+
+Let us start with the right-hand side of our equation ${n \choose k - 1} + {n \choose k}$, expanding these expressions out gives us the following 
+$$ {n \choose k - 1} + {n \choose k} = \frac{n!}{(k-1)!(n-k+1)!} + \frac{n!}{k!(n-k)!}$$
+$$ = \frac{n!(k) + n!(n-k+1)}{k(k-1)!(n-k+1)!} = \frac{n!(k -k + n + 1)}{k! (n+1 - k)!} = \frac{n!(n+1)}{k! (n+1 - k)!} = \frac{(n+1)!}{k! (n+1 - k)!}$$
+$$ = {n+1 \choose k}$$
+We have thus shown that ${n +1 \choose k} = {n \choose k - 1} + {n \choose k}$.
