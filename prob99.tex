@@ -1,22 +1,22 @@
 Proving that something is a group - Mastery Quiz 3
 
 \textbf{Theorem}
-Let $(G,·)$ be a group and $X$ a nonempty set.  Define $M(G, X)$ to be the set of functions from $X$ to $G$.  Define by $(f \star g)(x) =f(x)\cdot g(x)$.  Prove that $(M(G, X), \star)$ is a group.  Additionally show that if $(G,·)$ is abelian then $(M(G, X), \star)$ is abelian.
+Let $(G,·)$ be a group and $X$ a nonempty set.  Define $M(G, X)$ to be the set of functions from $X$ to $G$.  Define $\star$ by $(f \star g)(x) =f(x)\cdot g(x)$.  Prove that $(M(G, X), \star)$ is a group.  Additionally show that if $(G,·)$ is abelian then $(M(G, X), \star)$ is abelian.
 
 \begin{proof}
-In order to show that $(M(G, X), \star)$ is a group, we must show that it satisfies 4 major properties. We must show that the binary operation is closed, the binary operation is associative, the identity element exists within the group, and that for every element has an inverse element that exists within the group.
+In order to show that $(M(G, X), \star)$ is a group, we must show that it satisfies 4 major properties. We must show that the binary operation is closed, the binary operation is associative, the identity element exists within the group, and that every element has an inverse element that exists within the group.
 First let us show that the binary operation is closed. For the operation to be closed, we must show that the output of the operation is another element within our set. If we take two functions $h,k$ where $h,k \in M(G, X)$, then perform the operation $\star$, we get $(h \star k)(x)$. By definition of $\star$ we know that $(h \star k)(x) = h(x) \cdot k(x)$. Looking at the right hand side, we know that for any $x\in X$, then $h(x),k(x) \in G$ so we can say that the binary operation is closed. Now let us show that the group is associative. If we take functions $f,h,k\in M$, then we can perform $(f\star (h \star k))(x)$. We can expand this out to be 
 $$(f\star (h \star k))(x) = f(x) \cdot (h(x) \cdot k(x))$$
 Since we know that $f(x),h(x),k(x) \in G$ and that $G$ is a group, this means that elements of $G$ are associative so we are able to shift the parenthesis to get 
 $$ (f(x) \cdot h(x)) \cdot k(x) = ((f\star h) \star k)(x) $$
 And therefore showing that $M$ is associative.
 
-Now we look to show that the identity element exists within the group. Let $e_G$ be the identity element of $G$. Now let us define $e_M$ to be the function in $M$ that maps every element in $X$ to the $e_G$. $e_M(x) = e_G \forall x\in X$. Now let us show that $e_M$ is the identity element. If we take an element $f\in M$, $(e_M \star f) (x) = (e_M(x) \cdot f(x)) = (e_G \cdot f(x)) = f(x)$. Additionally  $(f \star e_M) (x) = (f(x) \cdot e_M(x)) =  (f(x)\cdot e_G ) = f(x)$. Therefore we see that $e_M$ is the identity element of $M$.
+Now we look to show that the identity element exists within the group. Let $e_G$ be the identity element of $G$. Now let us define $e_M$ to be the function in $M$ that maps every element in $X$ to $e_G$. $e_M(x) = e_G \forall x\in X$. Now let us show that $e_M$ is the identity element. If we take an element $f\in M$, $(e_M \star f) (x) = (e_M(x) \cdot f(x)) = (e_G \cdot f(x)) = f(x)$. Additionally  $(f \star e_M) (x) = (f(x) \cdot e_M(x)) =  (f(x)\cdot e_G ) = f(x)$. Therefore we see that $e_M$ is the identity element of $M$.
 
-Lastly we must show that every element has an inverse within the group such that $(f \star f^{-1}) (x) = e_M(x)$. If every $f\in M$ maps to some value $f(x) \in G$. Then for every $f\in M$, let us define the inverse $f^{-1}$ to map to $(f(x))^{-1}$. Then we can see that $f\in M$, $(f^{-1} \star f) (x) = ((f(x))^{-1} \cdot f(x)) = e_G = e_M(x)$. Additionally  $(f \star f^{-1}) (x) = (f(x) \cdot (f(x))^{-1}) = e_G = e_M(x)$. Therefore we can see that every element has an inverse.
+Lastly we must show that every element has an inverse within the group such that $(f \star f^{-1}) (x) = e_M(x)$. If every $f\in M$ maps to some value $f(x) \in G$, then for every $f\in M$, let us define the inverse $f^{-1}$ to map to $(f(x))^{-1}$. Then we can see that $f\in M$, $(f^{-1} \star f) (x) = ((f(x))^{-1} \cdot f(x)) = e_G = e_M(x)$. Additionally  $(f \star f^{-1}) (x) = (f(x) \cdot (f(x))^{-1}) = e_G = e_M(x)$. Therefore we can see that every element has an inverse.
 
 Since we have shown that the binary operation is associative, the identity element exists within the group, and that  every element has an inverse element that exists within the group, we can conclude that $(M(G, X), \star)$ is a group.
 
-Lastly we must show that if $G$ is abelian, then $(M(G, X), \star)$ is abelian as well. We know $(M(G, X), \star)$ is abelian for $f,g\in M$ if $(f \star g) (x) = (g \star f) (x)$.
+Lastly we must show that if $G$ is abelian, then $(M(G, X), \star)$ is abelian as well. We know $(M(G, X), \star)$ is abelian if for $f,g\in M$, $(f \star g) (x) = (g \star f) (x)$.
 $(f \star g) (x) = f(x) \cdot g(x)$ and since it is given that $G$ is abelian, we can rearrange these values to get $ g(x) \cdot f(x)$, which we can see is equivalent to $(g \star f) (x)$. Therefore showing that $(f \star g) (x) = (g \star f) (x)$ and $(M(G, X), \star)$ is abelian.
 \end{proof}

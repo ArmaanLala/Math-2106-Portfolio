@@ -1,7 +1,8 @@
-If and only if
+If and only if - Homework 10 Question 2
 
 \textbf{Theorem}
 Let $G$ be a group.  Prove that $G$ is abelian if and only if $(ab)^2=a^2b^2$ for all $a,b\in G$. 
+As a corollary show that if $a=a^{-1}$ for all $a\in G$ then $G$ is abelian.
 
 \begin{proof} First we must show that if $G$ is abelian, then $(ab)^2=a^2b^2$ for all $a,b\in G$
 
@@ -17,4 +18,12 @@ $$a^{-1}abab b^{-1} = a^{-1}aabb b^{-1}$$
 $$ ba = ab$$
 
 Since we have shown that $ab = ba$, then we know $G$ must be abelian by the definition of commutative so we have thus show that $G$ is abelian if and only if $(ab)^2=a^2b^2$ for all $a,b\in G$.
+\end{proof}
+\begin{proof}
+For the corollary, if $a=a^{-1}$, then we can see 
+$$ aa^{-1}  = e$$ based on the identity. And by substitution, we can see
+$$ aa = e $$
+$$ a ^{-1} a = e $$
+$$ aa^{-1} = a^{-1}a $$
+meaning that $G$ is an abelian group.
 \end{proof}

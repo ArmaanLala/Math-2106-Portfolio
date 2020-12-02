@@ -1,4 +1,4 @@
-Induction Proof
+Induction Proof - Question Given by Dr. Bloomquist
 
 
 
@@ -18,7 +18,7 @@ In order to prove by induction, we must first look at our base cases of $n = 0$ 
 If we let $n = 0$, then we can see that $\sum_{k=0}^{n} {n \choose k} = \sum_{k=0}^{0} {0 \choose 0} =\frac{0!}{0!} = 1 = 2^0$ so the case where $n = 0$ is true.
 Now let us look at the case where $n = 1$. We see that $\sum_{k=0}^{1} {1 \choose 0}  + {1 \choose 1} = \frac{1!}{0!} + \frac{1!}{1!} = 1 + 1 = 2 = 2^1$ so our case where $n = 1$ holds true as well.
 
-Now let us assume that $\sum_{k=0}^{n} {n \choose k}= 2^n$ for some constant $n,k \in \mathbb{N}$ where $k < n$. Now we look to show that $\sum_{k=0}^{n + 1} {n + 1 \choose k}= 2^{n+1}$.
+Now let us assume that $\sum_{k=0}^{n} {n \choose k}= 2^n$ for some constant $n \in \mathbb{N}$. Now we look to show that $\sum_{k=0}^{n + 1} {n + 1 \choose k}= 2^{n+1}$.
 
 Looking at $\sum_{k=0}^{n + 1} {n + 1 \choose k}$, we can expand this expression out as follows:
 

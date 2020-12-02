@@ -1,4 +1,4 @@
-A proof involving injectivity and surjectivity of a function
+A proof involving injectivity and surjectivity of a function - Midterm Question 4
 
 \textbf{Theorem}
 Let $f: A\rightarrow B$ be a function. For any $Y \subseteq B$, define
@@ -9,7 +9,9 @@ $$|f^{-1} (\{b\})| \leq 1 $$
 Prove that f is midterm injective if and only if $f$ is injective
 We also have that $f$ is said to be \textbf{midterm surjective} if for all $b \in B$
 $$| f^{-1}(\{b\})| > 0 $$
-Prove that f is midterm surjective if and only if $f$ is surjective
+Prove that f is midterm surjective if and only if $f$ is surjective.
+
+Use the above definitions to give a description of a bijection as both midterm injective and midterm surjective.
 
 \begin{proof}
 First let us begin by showing that $f$ is midterm injective if and only if $f$ is injective.
@@ -19,4 +21,10 @@ Now assume $f$ is midterm injective. We then know that $\forall b \in B  |f^{-1}
 Next we will show that $f$ is midterm surjective if and only if $f$ is surjective. Assume $f$ is midterm surjective, then we know that $|f^{-1} (b)|  > 0$, meaning that for all $b \in B$, there exists some $f(a) = b, a \in A$. Sincethere exists some $f(a) = b$ for all $b$, then by definition $f$ is surjective.
 Now assume $f$ is surjective, then we know $\forall b \in B, \exists a , f(a) = b$. Since there is always some $a$ that can transform into any $b$, $|f^{-1} (b)|$ is always at least one meaning that $|f^{-1} (b)| > 0$ showing that $f$ is midterm surjective.
 Therefore we have shown that $f$ is midterm surjective if and only if $f$ is surjective.
+
+By the definition of bijective, we know that a fucntion must be both injective and surjective to be bijective. Using the definitions of midterm injective and midterm surjective, we can see that for a function to be bijective: 
+$$0 < | f^{-1}(\{b\})| \leq 1  $$
+$$ | f^{-1}(\{b\})| = 1  $$
+
+This means that for every $b\in B$, there is a unique $a\in A$ and the unique value $a$ is guaranteed to exist.
 \end{proof}

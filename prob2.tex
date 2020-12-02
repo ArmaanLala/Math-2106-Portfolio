@@ -1,8 +1,8 @@
-Contrapositive Proof
+Contrapositive Proof - Homework 12 Question 1
 
-\textbf{Lemma 2.1} If $x \in G$ and $x \not \in H$ then $xh \not \in H$ for all $h \in H$
+\textbf{Lemma 2.1} If $x \in G$, $x \not \in H$ and $H\leq G$ then $xh \not \in H$ for all $h \in H$
 
-We look to show that for some group $G$ and subgroup $H$, if $x \in G$ and $x \not \in H$ then $xh \not \in H$ for all $h \in H$.
+For some group $G$ and subgroup $H$, if $x \in G$ and $x \not \in H$ then $xh \not \in H$ for all $h \in H$.
 If we know that $h\in H$, then by the definition of a group, then $h^{-1} \in H$ as well. Assume that $x \not \in H$ and $xh \in H$. Since $H$ is a group, it must be closed under some operation. If we take $xh$ and multiply by $h^{-1}$, then the result should be in $H$ as well. Therefore we get that $xhh^{-1} \in H$. We see that $xhh^{-1} = xe = x$, so we get that $x\in H$ which is a contradiction as we stated that $x \not \in H$ so we can conclude that $xh \not \in H$ for all $h \in H$.
 
 
@@ -13,7 +13,7 @@ Suppose that $H\leq G$ with $[G:H]=2$.  If $a$ and $b$ are not in $H$, then prov
 
 
 \begin{proof}
-We look to show the fact that ``If $a$ and $b$ are not in $H$, then $ab\in H$". We start by taking the contrapositive of this statement to get: If $ab \not\in H$, then either $a$ or $b$ is in $H$. Since we know that the index of $[G:H] = 2$, there are only two possible cosets. By definition, we know that $H$ contains the identity element so $eh \in H$ for all $h\in H$ and $eH = H$. Additionally, if we take $x$ where $x\in G$ and $x \not\in H$ then from Lemma 2.1 we can see that $xh \not \in H $  for all $h\in H$ and $xH \neq H$. This shows us that one of these cosets is $H$ itself, while the other is every element not in $H$. Since $ab\not\in H$, then we know that $abH \neq H$. Next we must show that either $a$ or $b$ is in $H$. Assume $a \in H$, then our contrapostive statement is true, meaning that our original statement is true. 
+We look to show the fact that ``If $a$ and $b$ are not in $H$, then $ab\in H$". We start by taking the contrapositive of this statement to get: If $ab \not\in H$, then either $a$ or $b$ is in $H$. Since we know that the index of $[G:H] = 2$, there are only two possible cosets. By definition, we know that $H$ contains the identity element so $eh \in H$ for all $h\in H$ and $eH = H$. Additionally, if we take $x$ where $x\in G$ and $x \not\in H$ then from Lemma 2.1 we can see that $xh \not \in H $  for all $h\in H$ and therefore $xH \neq H$. This shows us that one of these cosets is $H$ itself, while the other is every element not in $H$. Since $ab\not\in H$, then we know that $abH \neq H$. Next we must show that either $a$ or $b$ is in $H$. Assume $a \in H$, then our contrapostive statement is true, meaning that our original statement is true. 
 
-Next, assume $a \not\in H$, then we know $aH \neq H$.  Since there is only one coset not equal to $H$, we can deduce that then $xH = Hx$. Now we can proceed and look our cosets. We know that $abH \neq H$ and $aH \neq H$, then we can conclude that $abH = aH$. By multiplying $a^{-1}$ on both sides, we can get $a^{-1}abH = a^{-1}aH$, this then simplifies to $ebH = eH \rightarrow bH = H$, which we can use to conclude that $b$ is in $H$. Therefore, we have shown that if $ab$ is not in $H$, then either $a$ or $b$ is in $H$, and can therefore conclude that the contrapositive and therefore our original statement is true as well.
+Next, assume $a \not\in H$, then we know $aH \neq H$.  Since there is only one coset not equal to $H$, we can deduce that since $abH \neq H$ and $aH \neq H$, then we can see that $abH = aH$. By multiplying $a^{-1}$ on both sides, we can get $a^{-1}abH = a^{-1}aH$, this then simplifies to $ebH = eH \rightarrow bH = H$, which we can use to conclude that $b$ is in $H$. Therefore, we have shown that if $ab$ is not in $H$, then either $a$ or $b$ is in $H$, and can therefore conclude that the contrapositive and therefore our original statement is true as well.
 \end{proof}

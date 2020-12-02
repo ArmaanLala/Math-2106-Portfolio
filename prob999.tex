@@ -1,3 +1,14 @@
-Limit Proof
+Limit Proof - Mastery Quiz 4
 
 \textbf{Theorem}
+Let $a_n = \frac{100n + 2}{100n +1}$. Show that $\lim_{n\to\infty} a_n = 1$
+
+\begin{proof}
+Let $\epsilon > 0$. Define $N = \frac{1}{100\epsilon} - \frac{1}{100}$. Then for all $n> N$, this implies that $n >  \frac{1}{100\epsilon} - \frac{1}{100}$. Through algebra we can see that $100n > \frac{1}{\epsilon} -1$ and $100n + 1 > \frac{1}{\epsilon} $. Thus we can see that $\epsilon > \frac{1}{100n + 1}$. 
+
+Expanding the fraction $\frac{1}{100n + 1}$ gives us that $$\frac{1}{100n + 1} = \frac{100n + 1 -100n}{100n + 1} = \frac{100n +2 -100n - 1}{100n + 1}$$
+$$ \frac{100n +2 -100n - 1}{100n + 1} = \frac{100n + 2 - (100n + 1)}{100n} = \frac{100n +2}{100n + 1} - 1$$
+
+We now have that $\frac{100n +2}{100n + 1} - 1 < \epsilon$ and by taking the absolute value of the left hand side we can get $$|\frac{100n +2}{100n + 1} - 1| < \epsilon$$
+and by the definition of a convergent sequence, we see that $a_n = \frac{100n + 2}{100n +1}$ converges to 1, meaning that we have shown that $\lim_{n\to\infty} a_n = 1$ as desired.
+\end{proof}
