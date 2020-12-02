@@ -6,6 +6,7 @@ Existence and Uniqueness
 % \end{proof}
 
 
+\textbf{Theorem}
 Let $s_1=1$ and $s_{n+1}=\sqrt{s_n+1}$.  Prove that the limit of this sequence exists and is unique.
 
 \begin{proof}
@@ -39,4 +40,15 @@ $$|s_n - x| < \epsilon$$
 Which by the definition of a convergent sequence, means that $s_n$ converges to $x = \frac{1 + \sqrt{5}}{2}$, therefore proving that $s_n$ is convergent and has a limit as desired.
 \end{proof}
 
-NOW SHOW UNIQUE
+\begin{proof}
+Now let us show that the limit of this sequence is unique. Assume that $s_n$ has two limits defined as $a$ and $b$, where $a \neq b$. Let us define $\epsilon$ as $\epsilon = |a - b|$ and since the absolute value will always be positive so we can say that $\epsilon > 0$ and $|a-b| > 0$. By definition, since $a$ is a limit of $s_n$, then there exists some $N_1 \in \mathbb{N}$ such that for all $n>N_1$ $|a -s_n| < \frac{\epsilon}{2}$. Since $b$ is a limit of $s_n$, we can additionally say that there exists some $N_2 \in \mathbb{N}$ such that for all $n>N_2$ $|b -s_n| < \frac{\epsilon}{2}$. Now let $M$ be defined as $M = max\{N_1,N_2\}$. Then there exists some $n>M$ such that $|a-b| = |a - s_n + s_n - b|$.
+\begin{align*}
+    |a-b| &= |a - s_n + s_n - b|\\
+    &\leq |a-s_n| + |b-s_n|\\
+    & < \frac{\epsilon}{2} + \frac{\epsilon}{2}\\
+    & < \epsilon = |a - b|\\
+    |a - b| & < |a - b|\\
+\end{align*}
+
+This leads us to the statement that $|a - b| & < |a - b|$ which is impossible so we have arrived at a contradiction and showing that $a$ must be equal to $b$. Therefore, $s_n$ may only have one limit and the limit is unique.
+\end{proof}

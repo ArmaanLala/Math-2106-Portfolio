@@ -1,5 +1,16 @@
 Induction Proof
 
+
+
+\textbf{Lemma 7.1} ${n +1 \choose k} = {n \choose k - 1} + {n \choose k}$
+
+Let us start with the right-hand side of our equation ${n \choose k - 1} + {n \choose k}$, expanding these expressions out gives us the following 
+$$ {n \choose k - 1} + {n \choose k} = \frac{n!}{(k-1)!(n-k+1)!} + \frac{n!}{k!(n-k)!}$$
+$$ = \frac{n!(k) + n!(n-k+1)}{k(k-1)!(n-k+1)!} = \frac{n!(k -k + n + 1)}{k! (n+1 - k)!} = \frac{n!(n+1)}{k! (n+1 - k)!} = \frac{(n+1)!}{k! (n+1 - k)!}$$
+$$ = {n+1 \choose k}$$
+We have thus shown that ${n +1 \choose k} = {n \choose k - 1} + {n \choose k}$.
+
+\textbf{Theorem}
 Prove by induction that \[ \sum_{k=0}^{n} {n \choose k}= 2^n \]
 
 \begin{proof}
@@ -30,12 +41,5 @@ Next let us look at the summation $\sum_{k=1}^{n} {n \choose k}$. If we expand t
  $$= 2 \sum_{k=0}^{n} {n \choose k}$$
  Now using our induction hypothesis above, we can substitute $\sum_{k=0}^{n} {n \choose k}$ with $2^n$. This now gives us:
   $$= 2 \sum_{k=0}^{n} {n \choose k} = 2\cdot2^n = 2 ^{n+1}$$ Thus showing that $\sum_{k=0}^{n + 1} {n + 1 \choose k}= 2^{n+1}$ as desired. We have thus shown that by mathematical induction, $\sum_{k=0}^{n} {n \choose k}= 2^n$ holds true for all $n,k\in \mathbb{N}$
+  
 \end{proof}
-
-\textbf{Lemma 7.1} ${n +1 \choose k} = {n \choose k - 1} + {n \choose k}$
-
-Let us start with the right-hand side of our equation ${n \choose k - 1} + {n \choose k}$, expanding these expressions out gives us the following 
-$$ {n \choose k - 1} + {n \choose k} = \frac{n!}{(k-1)!(n-k+1)!} + \frac{n!}{k!(n-k)!}$$
-$$ = \frac{n!(k) + n!(n-k+1)}{k(k-1)!(n-k+1)!} = \frac{n!(k -k + n + 1)}{k! (n+1 - k)!} = \frac{n!(n+1)}{k! (n+1 - k)!} = \frac{(n+1)!}{k! (n+1 - k)!}$$
-$$ = {n+1 \choose k}$$
-We have thus shown that ${n +1 \choose k} = {n \choose k - 1} + {n \choose k}$.
